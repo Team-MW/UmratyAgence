@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PageTransition from './components/PageTransition';
+import WhatsAppButton from './components/WhatsAppButton';
 
 // Pages
 import Home from './pages/Home';
@@ -56,6 +57,7 @@ function AppContent() {
           </Routes>
         </AnimatePresence>
       </main>
+      <WhatsAppButton />
       <Footer />
     </div>
   );

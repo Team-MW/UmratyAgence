@@ -8,7 +8,11 @@ import flyerOmra from '../assets/PHOTO-2026-02-14-10-20-37.jpg';
 import iconHajj from '../assets/iconhajj.jpg';
 import iconHajj2 from '../assets/iconhajj2.jpg';
 import orientalBg from '../assets/oriental-luxury-bg.png';
-import heroBg from '../assets/bacgroundsection1.png';
+import heroBg from '../assets/bacgroudn11.png';
+import servicesBg from '../assets/pexels-shams-alam-ansari-2453647-4118038.jpg';
+
+import faqImage1 from '../assets/faq1.jpg';
+import faqImage2 from '../assets/faq2.jpg';
 
 export default function Home() {
     return (
@@ -16,48 +20,52 @@ export default function Home() {
             <SEO title="Accueil" description="Le Hajj bien accompli n’a d’autre récompense que le Paradis. Préparez-le dans les meilleures conditions avec Umraty Agence." />
 
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center bg-dark-900 text-white overflow-hidden">
-                {/* Background Image - Crowd/Mecca */}
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${heroBg})` }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dark-900/90" />
+            <section className="relative w-full bg-dark-900 text-white">
+                {/* Background Image - Full width, auto height to show full image */}
+                <div className="relative w-full">
+                    <img
+                        src={heroBg}
+                        alt="Background"
+                        className="w-full h-auto block min-h-[500px] object-cover md:object-contain md:min-h-0"
+                    />
+                    {/* Gradient Overlay matching image size */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dark-900/90" />
+                </div>
 
-                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-20">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.2 }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 text-white drop-shadow-lg leading-tight"
-                    >
-                        Le Hajj bien accompli <br />
-                        <span className="text-primary-500">n’a d’autre récompense que le Paradis.</span>
-                    </motion.h1>
+                {/* Content Overlay - Centered */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center px-4 max-w-4xl mx-auto pt-8 md:pt-16">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, delay: 0.2 }}
+                            className="text-2xl md:text-4xl lg:text-5xl font-serif font-bold mb-4 text-white drop-shadow-xl tracking-wide"
+                        >
+                            Le Hajj bien accompli <br />
+                            <span className="text-primary-300 italic font-light">n’a d’autre récompense que le Paradis.</span>
+                        </motion.h1>
 
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                        className="text-xl md:text-2xl text-gray-200 mb-6 max-w-3xl mx-auto font-light leading-relaxed"
-                    >
-                        Préparez-le dans les meilleures conditions. <br />
-                        Accompagnement complet, sérénité garantie.
-                    </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, delay: 0.5 }}
+                            className="text-base md:text-xl text-gray-100 mb-8 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md hidden md:block"
+                        >
+                            Préparez-le dans les meilleures conditions. <br />
+                            Accompagnement complet, sérénité garantie.
+                        </motion.p>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
-                        className="flex flex-col sm:flex-row gap-4 justify-center"
-                    >
-                        <Link to="/contact" className="px-8 py-4 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-primary-500/40 text-lg uppercase tracking-wide">
-                            Inscrivez vous maintenant
-                        </Link>
-                        <a href="https://wa.me/33758484477" className="px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold rounded-full transition-all transform hover:scale-105 hover:shadow-lg text-lg uppercase tracking-wide shadow-green-900/20">
-                            WhatsApp
-                        </a>
-                    </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.8 }}
+                            className="flex justify-center"
+                        >
+                            <Link to="/contact" className="px-8 py-3 bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white hover:text-dark-900 text-white font-semibold rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] text-sm md:text-base uppercase tracking-widest">
+                                Inscrivez vous maintenant
+                            </Link>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 
@@ -135,13 +143,13 @@ export default function Home() {
 
             {/* Guide Omra/Hajj Section */}
             <Section variant="light">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Image - Placeholder for 'groupe omra bonne dimension' */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl lg:order-2 flex items-center justify-center bg-gray-100"
+                        className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center bg-gray-100"
                     >
                         <img
                             src={flyerOmra}
@@ -154,7 +162,6 @@ export default function Home() {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="lg:order-1"
                     >
                         <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-6">Guide Omra/Hajj</h2>
                         <h3 className="text-xl font-bold text-primary-600 mb-4">Aboul Boukhary Yadaly</h3>
@@ -176,7 +183,7 @@ export default function Home() {
                 variant="image"
                 className="text-white relative overflow-hidden"
                 style={{
-                    backgroundImage: `url(${orientalBg})`,
+                    backgroundImage: `url(${servicesBg})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
@@ -252,6 +259,32 @@ export default function Home() {
                             </div>
                             <h3 className="text-2xl font-bold mb-4 font-serif text-gray-900">{service.title}</h3>
                             <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+                        </motion.div>
+                    ))}
+                </div>
+            </Section>
+
+            {/* FAQ Slider Section */}
+            <Section variant="light" className="overflow-hidden">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-4">Questions Fréquentes</h2>
+                    <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
+                </div>
+
+                <div className="flex overflow-x-auto pb-8 gap-6 px-4 md:justify-center scrollbar-hide snap-x">
+                    {[faqImage1, faqImage2].map((img, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: index * 0.2 }}
+                            className="flex-shrink-0 w-[300px] md:w-[400px] rounded-2xl overflow-hidden shadow-xl border-4 border-primary-50 snap-center"
+                        >
+                            <img
+                                src={img}
+                                alt={`FAQ ${index + 1}`}
+                                className="w-full h-auto object-cover"
+                            />
                         </motion.div>
                     ))}
                 </div>

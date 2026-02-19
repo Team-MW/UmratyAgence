@@ -1,19 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, Instagram, Facebook } from 'lucide-react';
-import orientalBg from '../assets/oriental-luxury-bg.png';
 
 export default function Footer() {
     return (
-        <footer
-            className="relative bg-dark-900 text-white border-t border-primary-800/30 overflow-hidden"
-            style={{
-                backgroundImage: `url(${orientalBg})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-            }}
-        >
-            {/* Dark Overlay for readability */}
-            <div className="absolute inset-0 bg-dark-950/90" />
+        <footer className="relative bg-black text-white border-t border-gray-800 overflow-hidden">
+
 
             {/* Decorative Top Border */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-900 via-primary-500 to-primary-900 z-20" />

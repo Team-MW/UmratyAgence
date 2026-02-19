@@ -2,7 +2,9 @@ import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Check, Star } from 'lucide-react';
-import section1Bg from '../assets/section1.jpg';
+import serviceHeroBg from '../assets/pexels-mjlo-2787826.jpg';
+import progImage1 from '../assets/WhatsApp-Image-2026-01-21-at-07.08.20-1.jpg';
+import progImage2 from '../assets/WhatsApp-Image-2025-12-26-at-20.15.42-1-818x1024.jpg';
 
 export default function Services() {
     return (
@@ -12,13 +14,13 @@ export default function Services() {
             <div className="bg-dark-900 py-32 text-center text-white relative overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center opacity-40"
-                    style={{ backgroundImage: `url(${section1Bg})` }}
+                    style={{ backgroundImage: `url(${serviceHeroBg})` }}
                 />
                 <div className="relative z-10 max-w-4xl mx-auto px-4">
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-6xl font-serif font-bold mb-6 text-primary-400"
+                        className="text-5xl md:text-6xl font-serif font-bold mb-6 text-white drop-shadow-lg"
                     >
                         Nos Formules
                     </motion.h1>
@@ -26,95 +28,196 @@ export default function Services() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-xl text-gray-200"
+                        className="text-xl text-white font-light tracking-wide drop-shadow-md"
                     >
                         Choisir l'excellence pour votre voyage spirituel.
                     </motion.p>
                 </div>
             </div>
 
+            {/* Programme Section */}
             <Section variant="light">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    {/* Package 1 */}
-                    <motion.div
-                        whileHover={{ y: -10 }}
-                        className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col"
-                    >
-                        <div className="h-48 bg-gray-200 bg-[url('https://images.unsplash.com/photo-1596706057077-bd1c360098df?q=80&w=1000')] bg-cover bg-center" />
-                        <div className="p-8 flex-grow">
-                            <div className="flex justify-between items-start mb-4">
-                                <h3 className="text-2xl font-bold font-serif text-dark-900">Omra Confort</h3>
-                                <span className="bg-primary-100 text-primary-800 text-xs font-bold px-3 py-1 rounded-full">Populaire</span>
+                <div className="flex flex-col gap-24">
+                    {/* Row 1: Programme Intro - Image Right */}
+                    {/* Row 1: Programme Intro - Image Right */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-6">Notre Programme Hajj</h2>
+                            <h3 className="text-2xl font-medium text-primary-600 mb-6">Avec votre frère Aboul Boukhary Yadaly</h3>
+                            <div className="w-20 h-1 bg-primary-500 rounded-full mb-8" />
+
+                            <h4 className="text-xl font-bold text-dark-900 mb-2">Inscrivez-vous sur notre formulaire</h4>
+                            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                                Ce formulaire nous donneras les informations nécessaires afin de vous contacter via WhatsApp.
+                            </p>
+
+                            <h4 className="text-xl font-bold text-primary-700 mb-4">Information reçu</h4>
+                            <p className="text-gray-600 mb-8 leading-relaxed">
+                                Une fois les informations reçu vous serez ajouté sur notre groupe Whatsapp. Ce groupe servira à la gestion et l’organisation du hajj ainsi qu’à l’inscription sur Nusuk.
+                            </p>
+
+                            <div className="bg-primary-50 p-8 rounded-2xl border border-primary-100 flex flex-col gap-4">
+                                <h4 className="text-xl font-bold text-dark-900 mb-2">Prêt à nous rejoindre ?</h4>
+                                <a
+                                    href="https://wa.me/33758484477"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-green-500/20 w-full md:w-auto"
+                                >
+                                    <span>Cliquer juste ici pour nous rejoindre !</span>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.93.597 1.69.917 2.806.917 3.181 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm0 9.778c-.961 0-1.748-.288-2.673-.799l-.265-.133-1.638.429.437-1.596-.153-.263c-.569-.906-.906-1.742-.906-2.616 0-2.208 1.796-4.004 4.004-4.004 2.208 0 4.004 1.796 4.004 4.004 0 2.208-1.796 4.004-4.004 4.004z" />
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://form.jotform.com/240373809673059"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-primary-500/20 w-full md:w-auto"
+                                >
+                                    <span>Remplir le Formulaire</span>
+                                </a>
                             </div>
-                            <p className="text-gray-600 mb-6">Idéal pour les familles. Hôtels 4* à proximité des Harams.</p>
-                            <ul className="space-y-3 mb-8">
-                                {['Vols directs', 'Hôtels 4 étoiles', 'Demi-pension', 'Transferts inclus', 'Guide francophone'].map((item, i) => (
-                                    <li key={i} className="flex items-center text-gray-700">
-                                        <Check className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-white p-2 rounded-3xl shadow-2xl border border-gray-100"
+                        >
+                            <img
+                                src={progImage1}
+                                alt="Programme Omra"
+                                className="w-full h-auto rounded-2xl"
+                            />
+                        </motion.div>
+                    </div>
+
+                    {/* Row 2: Inscription & WhatsApp - Image Left */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="lg:order-first order-last bg-white p-2 rounded-3xl shadow-2xl border border-gray-100"
+                        >
+                            <img
+                                src={progImage2}
+                                alt="Groupe WhatsApp Hajj"
+                                className="w-full h-auto rounded-2xl"
+                            />
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-3xl md:text-4xl font-serif text-dark-900 mb-6">Inscrivez-vous sur notre formulaire</h2>
+                            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                                Ce formulaire nous donneras les informations nécessaires afin de vous contacter via WhatsApp.
+                            </p>
+
+                            <h4 className="text-xl font-bold text-primary-700 mb-4">Information reçu</h4>
+                            <p className="text-gray-600 mb-8 leading-relaxed">
+                                Une fois les informations reçu vous serez ajouté sur notre groupe Whatsapp. Ce groupe servira à la gestion et l’organisation du hajj ainsi qu’à l’inscription sur Nusuk.
+                            </p>
+
+                            <div className="bg-primary-50 p-8 rounded-2xl border border-primary-100">
+                                <h4 className="text-xl font-bold text-dark-900 mb-4">Prêt à nous rejoindre ?</h4>
+                                <a
+                                    href="https://wa.me/33758484477"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-green-500/20"
+                                >
+                                    <span>Cliquer juste ici pour nous rejoindre !</span>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.93.597 1.69.917 2.806.917 3.181 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm0 9.778c-.961 0-1.748-.288-2.673-.799l-.265-.133-1.638.429.437-1.596-.153-.263c-.569-.906-.906-1.742-.906-2.616 0-2.208 1.796-4.004 4.004-4.004 2.208 0 4.004 1.796 4.004 4.004 0 2.208-1.796 4.004-4.004 4.004z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </Section>
+
+            {/* Grille Tarifaire Section */}
+            <Section variant="light">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-8">Grille tarifaire</h2>
+
+                        <div className="space-y-8">
+                            <div className="flex gap-4">
+                                <div className="text-4xl">🏨</div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-dark-900 mb-2">Réservation d’hôtel</h4>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        Nous prenons en charge la réservation de votre hébergement à proximité des lieux saints, selon vos préférences et votre budget.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4">
+                                <div className="text-4xl">🛂</div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-dark-900 mb-2">Visa</h4>
+                                    <p className="text-gray-600 leading-relaxed mb-2">
+                                        Nous nous occupons de toutes les démarches liées à l’obtention de votre visa :
+                                    </p>
+                                    <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Visa touristique (ressortissants UE)</li>
+                                        <li>Visa Omra (hors UE)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4">
+                                <div className="text-4xl">🚆</div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-dark-900 mb-2">Transport</h4>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        Pour faciliter vos déplacements sur place, plusieurs solutions sont proposées
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="p-8 bg-gray-50 border-t border-gray-100">
-                            <div className="text-3xl font-bold text-primary-600 mb-4">1 890 €</div>
-                            <button className="w-full py-3 bg-dark-900 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors">
-                                En savoir plus
-                            </button>
+
+                        <div className="mt-10 bg-primary-50 p-6 rounded-2xl border border-primary-100 inline-block">
+                            <a
+                                href="https://wa.me/33758484477"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-green-500/20"
+                            >
+                                <span>Cliquer juste ici pour nous rejoindre !</span>
+                                <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.93.597 1.69.917 2.806.917 3.181 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm0 9.778c-.961 0-1.748-.288-2.673-.799l-.265-.133-1.638.429.437-1.596-.153-.263c-.569-.906-.906-1.742-.906-2.616 0-2.208 1.796-4.004 4.004-4.004 2.208 0 4.004 1.796 4.004 4.004 0 2.208-1.796 4.004-4.004 4.004z" />
+                                </svg>
+                            </a>
                         </div>
                     </motion.div>
 
-                    {/* Package 2 */}
                     <motion.div
-                        whileHover={{ y: -10 }}
-                        className="bg-white rounded-2xl shadow-xl overflow-hidden border border-primary-200 flex flex-col relative"
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-white p-2 rounded-3xl shadow-2xl border border-gray-100"
                     >
-                        <div className="absolute top-0 right-0 bg-primary-500 text-dark-900 text-xs font-bold px-4 py-1 rounded-bl-lg z-10">Premium</div>
-                        <div className="h-48 bg-gray-200 bg-[url('https://images.unsplash.com/photo-1564121211835-e88c852648ab?q=80&w=1000')] bg-cover bg-center" />
-                        <div className="p-8 flex-grow">
-                            <h3 className="text-2xl font-bold font-serif text-dark-900 mb-4">Omra Deluxe</h3>
-                            <p className="text-gray-600 mb-6">Le confort absolu. Hôtels 5* au pied des Harams.</p>
-                            <ul className="space-y-3 mb-8">
-                                {['Vols classe affaires (option)', 'Hôtels 5 étoiles face Haram', 'Pension complète', 'Transferts privés VIP', 'Guide spirituel dédié'].map((item, i) => (
-                                    <li key={i} className="flex items-center text-gray-700">
-                                        <Star className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0 fill-current" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="p-8 bg-gray-50 border-t border-gray-100">
-                            <div className="text-3xl font-bold text-primary-600 mb-4">2 490 €</div>
-                            <button className="w-full py-3 bg-primary-500 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors shadow-lg shadow-primary-500/30">
-                                Réserver
-                            </button>
-                        </div>
-                    </motion.div>
-
-                    {/* Package 3 */}
-                    <motion.div
-                        whileHover={{ y: -10 }}
-                        className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col"
-                    >
-                        <div className="h-48 bg-gray-200 bg-[url('https://images.unsplash.com/photo-1580418827493-f2b22c4385be?q=80&w=1000')] bg-cover bg-center" />
-                        <div className="p-8 flex-grow">
-                            <h3 className="text-2xl font-bold font-serif text-dark-900 mb-4">Hajj 2026</h3>
-                            <p className="text-gray-600 mb-6">Pré-inscrivez vous pour le pèlerinage de votre vie.</p>
-                            <ul className="space-y-3 mb-8">
-                                {['Vols confirmés', 'Visa Hajj garanti', 'Mina & Arafat VIP', 'Logement Azizia/Shisha', 'Formation rites'].map((item, i) => (
-                                    <li key={i} className="flex items-center text-gray-700">
-                                        <Check className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="p-8 bg-gray-50 border-t border-gray-100">
-                            <div className="text-3xl font-bold text-primary-600 mb-4">Sur devis</div>
-                            <button className="w-full py-3 bg-dark-900 text-white font-bold rounded-lg hover:bg-primary-600 transition-colors">
-                                Me pré-inscrire
-                            </button>
-                        </div>
+                        <img
+                            src={progImage2}
+                            alt="Grille Tarifaire"
+                            className="w-full h-auto rounded-2xl"
+                        />
                     </motion.div>
                 </div>
             </Section>
