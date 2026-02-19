@@ -2,7 +2,7 @@ import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
-import section1Bg from '../assets/section1.jpg';
+import contactHeroBg from '../assets/Gemini_Generated_Image_anjhwjanjhwjanjh.png';
 
 export default function Contact() {
     return (
@@ -12,7 +12,7 @@ export default function Contact() {
             <div className="bg-dark-900 py-32 text-center text-white relative overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center opacity-40"
-                    style={{ backgroundImage: `url(${section1Bg})` }}
+                    style={{ backgroundImage: `url(${contactHeroBg})` }}
                 />
                 <div className="relative z-10 max-w-4xl mx-auto px-4">
                     <motion.h1

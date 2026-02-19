@@ -7,6 +7,8 @@ import flyerHajj from '../assets/PHOTO-2026-02-18-17-05-02.jpg';
 import flyerOmra from '../assets/PHOTO-2026-02-14-10-20-37.jpg';
 import iconHajj from '../assets/iconhajj.jpg';
 import iconHajj2 from '../assets/iconhajj2.jpg';
+import orientalBg from '../assets/oriental-luxury-bg.png';
+import heroBg from '../assets/bacgroundsection1.png';
 
 export default function Home() {
     return (
@@ -16,7 +18,10 @@ export default function Home() {
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center bg-dark-900 text-white overflow-hidden">
                 {/* Background Image - Crowd/Mecca */}
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center" />
+                <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${heroBg})` }}
+                />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dark-900/90" />
 
                 <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-20">
@@ -67,44 +72,29 @@ export default function Home() {
                 </div>
             </Section>
 
-            {/* Nos Services d'Excellence */}
+            {/* Guide Complet Section */}
             <Section variant="light" className="relative pt-0">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-4">Nos Services d'Excellence</h2>
-                    <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
-                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">Nous proposons des formules adaptées à tous les besoins pour vous permettre de vivre votre adoration en toute tranquillité.</p>
-                </div>
+                <div className="text-center max-w-4xl mx-auto">
+                    <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-6">Omra/Hajj avec notre agence</h2>
+                    <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                        Vous souhaitez comprendre chaque étape de votre Hajj ou de votre Omra ?
+                    </p>
+                    <p className="text-gray-600 mb-10">
+                        Retrouvez dans notre guide complet toutes les informations nécessaires, de la réservation jusqu’à votre retour.
+                    </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {[
-                        {
-                            icon: <img src={iconHajj} alt="Packages" className="w-12 h-12 object-contain" />,
-                            title: "Packages Complets",
-                            desc: "Vol, hébergement et transferts inclus pour un voyage sans souci."
-                        },
-                        {
-                            icon: <img src={iconHajj2} alt="Hotels" className="w-12 h-12 object-contain" />,
-                            title: "Hôtels Premium",
-                            desc: "Séjournez dans les meilleurs hôtels à proximité des lieux saints."
-                        },
-                        {
-                            icon: <ShieldCheck className="w-8 h-8" />,
-                            title: "Guides Religieux",
-                            desc: "Accompagnement par des guides qualifiés pour vous assister dans vos rites."
-                        }
-                    ].map((service, index) => (
-                        <motion.div
-                            key={index}
-                            whileHover={{ y: -10 }}
-                            className="p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:border-primary-200 transition-all duration-300 group"
-                        >
-                            <div className="w-20 h-20 bg-primary-50 rounded-2xl flex items-center justify-center mb-6 text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300 overflow-hidden p-2">
-                                {service.icon}
-                            </div>
-                            <h3 className="text-2xl font-bold mb-4 font-serif text-gray-900">{service.title}</h3>
-                            <p className="text-gray-600 leading-relaxed">{service.desc}</p>
-                        </motion.div>
-                    ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
+                        <div className="h-64 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src={iconHajj} alt="Etape Hajj" className="w-full h-full object-cover" />
+                        </div>
+                        <div className="h-64 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300 md:mt-12">
+                            <img src={iconHajj2} alt="Message Hajj" className="w-full h-full object-cover" />
+                        </div>
+                    </div>
+
+                    <Link to="/contact" className="inline-block px-10 py-4 bg-dark-900 text-white hover:bg-primary-600 font-bold rounded-full transition-all text-lg shadow-lg">
+                        En savoir plus
+                    </Link>
                 </div>
             </Section>
 
@@ -182,18 +172,28 @@ export default function Home() {
             </Section>
 
             {/* Services Divers */}
-            <Section variant="dark" className="text-white relative overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <Section
+                variant="image"
+                className="text-white relative overflow-hidden"
+                style={{
+                    backgroundImage: `url(${orientalBg})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                {/* Overlay for better readability if needed, though variant="dark" usually handles background color, here we use image */}
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Services divers</h2>
-                        <p className="text-xl text-gray-300 mb-8">
+                        <p className="text-xl text-gray-200 mb-8">
                             Besoin d’un visa, de réservez un hotel ou encore de reservez vos billet de train Médina – Mekkah ?
                         </p>
-                        <p className="text-gray-400 mb-8">
+                        <p className="text-gray-100 mb-8">
                             Consulter dès maintenant nos service pour vous faciliter votre voyage.
                         </p>
                         <Link to="/services" className="px-8 py-3 border border-primary-500 text-primary-400 hover:bg-primary-600 hover:text-white transition-all rounded-full font-bold">
@@ -202,43 +202,58 @@ export default function Home() {
                     </motion.div>
 
                     <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                        <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
                             <Plane className="w-10 h-10 text-primary-500 mb-4" />
-                            <h4 className="font-bold text-lg mb-2">Vols & Train</h4>
-                            <p className="text-sm text-gray-400">Réservation simplifiée</p>
+                            <h4 className="font-bold text-lg mb-2 text-white">Vols & Train</h4>
+                            <p className="text-sm text-white">Réservation simplifiée</p>
                         </div>
-                        <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                        <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
                             <ShieldCheck className="w-10 h-10 text-primary-500 mb-4" />
-                            <h4 className="font-bold text-lg mb-2">Visas</h4>
-                            <p className="text-sm text-gray-400">Démarches administratives</p>
+                            <h4 className="font-bold text-lg mb-2 text-white">Visas</h4>
+                            <p className="text-sm text-white">Démarches administratives</p>
                         </div>
                     </div>
                 </div>
             </Section>
 
-            {/* Guide Complet Section */}
+            {/* Nos Services d'Excellence */}
             <Section variant="light">
-                <div className="text-center max-w-4xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-6">Omra/Hajj avec notre agence</h2>
-                    <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                        Vous souhaitez comprendre chaque étape de votre Hajj ou de votre Omra ?
-                    </p>
-                    <p className="text-gray-600 mb-10">
-                        Retrouvez dans notre guide complet toutes les informations nécessaires, de la réservation jusqu’à votre retour.
-                    </p>
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-4">Nos Services d'Excellence</h2>
+                    <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
+                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">Nous proposons des formules adaptées à tous les besoins pour vous permettre de vivre votre adoration en toute tranquillité.</p>
+                </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
-                        <div className="h-64 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
-                            <img src={iconHajj} alt="Etape Hajj" className="w-full h-full object-cover" />
-                        </div>
-                        <div className="h-64 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300 md:mt-12">
-                            <img src={iconHajj2} alt="Message Hajj" className="w-full h-full object-cover" />
-                        </div>
-                    </div>
-
-                    <Link to="/contact" className="inline-block px-10 py-4 bg-dark-900 text-white hover:bg-primary-600 font-bold rounded-full transition-all text-lg shadow-lg">
-                        En savoir plus
-                    </Link>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {[
+                        {
+                            icon: <img src={iconHajj} alt="Packages" className="w-12 h-12 object-contain" />,
+                            title: "Packages Complets",
+                            desc: "Vol, hébergement et transferts inclus pour un voyage sans souci."
+                        },
+                        {
+                            icon: <img src={iconHajj2} alt="Hotels" className="w-12 h-12 object-contain" />,
+                            title: "Hôtels Premium",
+                            desc: "Séjournez dans les meilleurs hôtels à proximité des lieux saints."
+                        },
+                        {
+                            icon: <ShieldCheck className="w-8 h-8" />,
+                            title: "Guides Religieux",
+                            desc: "Accompagnement par des guides qualifiés pour vous assister dans vos rites."
+                        }
+                    ].map((service, index) => (
+                        <motion.div
+                            key={index}
+                            whileHover={{ y: -10 }}
+                            className="p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:border-primary-200 transition-all duration-300 group"
+                        >
+                            <div className="w-20 h-20 bg-primary-50 rounded-2xl flex items-center justify-center mb-6 text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300 overflow-hidden p-2">
+                                {service.icon}
+                            </div>
+                            <h3 className="text-2xl font-bold mb-4 font-serif text-gray-900">{service.title}</h3>
+                            <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+                        </motion.div>
+                    ))}
                 </div>
             </Section>
         </>

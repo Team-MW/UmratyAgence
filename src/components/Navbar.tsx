@@ -40,8 +40,12 @@ export default function Navbar() {
                                     to={link.path}
                                     className={({ isActive }) =>
                                         `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${isActive
-                                            ? 'text-primary-600 font-bold'
-                                            : 'text-gray-700 hover:text-primary-600'
+                                            ? scrolled
+                                                ? 'text-primary-600 font-bold'
+                                                : 'text-white font-bold border-b-2 border-white'
+                                            : scrolled
+                                                ? 'text-gray-700 hover:text-primary-600'
+                                                : 'text-white/90 hover:text-white'
                                         }`
                                     }
                                 >
@@ -54,7 +58,8 @@ export default function Navbar() {
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-600 focus:outline-none"
+                            className={`inline-flex items-center justify-center p-2 rounded-md hover:text-primary-600 focus:outline-none ${scrolled ? 'text-gray-700' : 'text-white'
+                                }`}
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </button>

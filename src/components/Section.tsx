@@ -11,9 +11,10 @@ interface SectionProps {
     className?: string;
     variant?: 'light' | 'dark' | 'image' | 'gold';
     id?: string;
+    style?: React.CSSProperties;
 }
 
-export default function Section({ children, className, variant = 'light', id }: SectionProps) {
+export default function Section({ children, className, variant = 'light', id, style }: SectionProps) {
     const getBgClass = () => {
         switch (variant) {
             case 'dark':
@@ -34,7 +35,8 @@ export default function Section({ children, className, variant = 'light', id }: 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className={cn("py-20 px-4 sm:px-6 lg:px-8 overflow-hidden", getBgClass(), className)}
+            className={cn("py-20 px-4 sm:px-6 lg:px-8 overflow-hidden relative", getBgClass(), className)}
+            style={style}
         >
             <div className="max-w-7xl mx-auto relative z-10">
                 {children}
