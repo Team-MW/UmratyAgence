@@ -1,10 +1,12 @@
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Check, Star } from 'lucide-react';
+
 import serviceHeroBg from '../assets/pexels-mjlo-2787826.jpg';
 import progImage1 from '../assets/WhatsApp-Image-2026-01-21-at-07.08.20-1.jpg';
 import progImage2 from '../assets/WhatsApp-Image-2025-12-26-at-20.15.42-1-818x1024.jpg';
+
+
 
 export default function Services() {
     return (

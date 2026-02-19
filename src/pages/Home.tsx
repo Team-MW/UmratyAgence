@@ -7,7 +7,7 @@ import flyerHajj from '../assets/PHOTO-2026-02-18-17-05-02.jpg';
 import flyerOmra from '../assets/PHOTO-2026-02-14-10-20-37.jpg';
 import iconHajj from '../assets/iconhajj.jpg';
 import iconHajj2 from '../assets/iconhajj2.jpg';
-import orientalBg from '../assets/oriental-luxury-bg.png';
+
 import heroBg from '../assets/bacgroudn11.png';
 import servicesBg from '../assets/pexels-shams-alam-ansari-2453647-4118038.jpg';
 
