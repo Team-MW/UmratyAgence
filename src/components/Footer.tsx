@@ -98,8 +98,8 @@ export default function Footer() {
                                     <Phone size={16} className="text-primary-500 group-hover:text-white" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-xs text-gray-500 uppercase tracking-widest mb-0.5">Appelez-nous</span>
-                                    <a href="https://wa.me/33758484477" className="text-gray-300 hover:text-white font-medium transition-colors">
+                                    <span className="text-xs text-gray-500 uppercase tracking-widest mb-0.5">WhatsApp</span>
+                                    <a href="https://wa.me/33758484477" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white font-medium transition-colors">
                                         +33 7 58 48 44 77
                                     </a>
                                 </div>

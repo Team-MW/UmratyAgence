@@ -11,7 +11,11 @@ import progImage2 from '../assets/WhatsApp-Image-2025-12-26-at-20.15.42-1-818x10
 export default function Services() {
     return (
         <>
-            <SEO title="Nos Services" description="Découvrez nos formules Omra et Hajj. Confort, accompagnement et spiritualité." />
+            <SEO
+                title="Nos Formules"
+                description="Découvrez les forfaits Omra et Hajj d'Umraty Agence. Confort garanti, vols, hôtels proches du Haram, prise en charge des visas touristiques et accompagnement spirituel personnalisé."
+                keywords="formules Hajj, programme Omra, réservation hôtel La Mecque, visas, Omra sur mesure, Umraty Agence, guide pèlerinage"
+            />
 
             <div className="bg-dark-900 py-32 text-center text-white relative overflow-hidden">
                 <div
@@ -70,7 +74,7 @@ export default function Services() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-green-500/20 w-full md:w-auto"
                                 >
-                                    <span>Cliquer juste ici pour nous rejoindre !</span>
+                                    <span>WhatsApp: +33 7 58 48 44 77</span>
                                     <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                                         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.93.597 1.69.917 2.806.917 3.181 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm0 9.778c-.961 0-1.748-.288-2.673-.799l-.265-.133-1.638.429.437-1.596-.153-.263c-.569-.906-.906-1.742-.906-2.616 0-2.208 1.796-4.004 4.004-4.004 2.208 0 4.004 1.796 4.004 4.004 0 2.208-1.796 4.004-4.004 4.004z" />
                                     </svg>
@@ -92,6 +96,7 @@ export default function Services() {
                             className="bg-white p-2 rounded-3xl shadow-2xl border border-gray-100"
                         >
                             <img
+                                loading="lazy"
                                 src={progImage1}
                                 alt="Programme Omra"
                                 className="w-full h-auto rounded-2xl"
@@ -108,6 +113,7 @@ export default function Services() {
                             className="lg:order-first order-last bg-white p-2 rounded-3xl shadow-2xl border border-gray-100"
                         >
                             <img
+                                loading="lazy"
                                 src={progImage2}
                                 alt="Groupe WhatsApp Hajj"
                                 className="w-full h-auto rounded-2xl"
@@ -137,7 +143,7 @@ export default function Services() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-green-500/20"
                                 >
-                                    <span>Cliquer juste ici pour nous rejoindre !</span>
+                                    <span>WhatsApp: +33 7 58 48 44 77</span>
                                     <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                                         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.93.597 1.69.917 2.806.917 3.181 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm0 9.778c-.961 0-1.748-.288-2.673-.799l-.265-.133-1.638.429.437-1.596-.153-.263c-.569-.906-.906-1.742-.906-2.616 0-2.208 1.796-4.004 4.004-4.004 2.208 0 4.004 1.796 4.004 4.004 0 2.208-1.796 4.004-4.004 4.004z" />
                                     </svg>
@@ -201,7 +207,7 @@ export default function Services() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-green-500/20"
                             >
-                                <span>Cliquer juste ici pour nous rejoindre !</span>
+                                <span>WhatsApp: +33 7 58 48 44 77</span>
                                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.93.597 1.69.917 2.806.917 3.181 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm0 9.778c-.961 0-1.748-.288-2.673-.799l-.265-.133-1.638.429.437-1.596-.153-.263c-.569-.906-.906-1.742-.906-2.616 0-2.208 1.796-4.004 4.004-4.004 2.208 0 4.004 1.796 4.004 4.004 0 2.208-1.796 4.004-4.004 4.004z" />
                                 </svg>
@@ -216,6 +222,7 @@ export default function Services() {
                         className="bg-white p-2 rounded-3xl shadow-2xl border border-gray-100"
                     >
                         <img
+                            loading="lazy"
                             src={progImage2}
                             alt="Grille Tarifaire"
                             className="w-full h-auto rounded-2xl"

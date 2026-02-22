@@ -17,7 +17,11 @@ import faqImage2 from '../assets/faq2.jpg';
 export default function Home() {
     return (
         <>
-            <SEO title="Accueil" description="Le Hajj bien accompli n’a d’autre récompense que le Paradis. Préparez-le dans les meilleures conditions avec Umraty Agence." />
+            <SEO
+                title="Accueil"
+                description="Préparez votre Omra et votre Hajj dans les meilleures conditions avec Umraty Agence. Forfaits sur mesure, hôtels premium, démarches visas et accompagnement par un guide religieux qualifié."
+                keywords="Agence Omra, Agence Hajj, Pèlerinage, La Mecque, Médine, forfaits Hajj, réservation Omra, Umraty Agence, guide religieux"
+            />
 
             {/* Hero Section */}
             <section className="relative w-full bg-dark-900 text-white">
@@ -93,10 +97,10 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
                         <div className="h-64 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
-                            <img src={iconHajj} alt="Etape Hajj" className="w-full h-full object-cover" />
+                            <img src={iconHajj} loading="lazy" alt="Etape Hajj" className="w-full h-full object-cover" />
                         </div>
                         <div className="h-64 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300 md:mt-12">
-                            <img src={iconHajj2} alt="Message Hajj" className="w-full h-full object-cover" />
+                            <img src={iconHajj2} loading="lazy" alt="Message Hajj" className="w-full h-full object-cover" />
                         </div>
                     </div>
 
@@ -135,6 +139,7 @@ export default function Home() {
                         className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center bg-gray-100"
                     >
                         <img
+                            loading="lazy"
                             src={flyerHajj}
                             alt="Forfaits Hajj"
                             className="w-full h-full object-contain"
@@ -154,6 +159,7 @@ export default function Home() {
                         className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center bg-gray-100"
                     >
                         <img
+                            loading="lazy"
                             src={flyerOmra}
                             alt="Guide Omra"
                             className="w-full h-full object-cover"
@@ -300,12 +306,12 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
                         {
-                            icon: <img src={iconHajj} alt="Packages" className="w-12 h-12 object-contain" />,
+                            icon: <img src={iconHajj} loading="lazy" alt="Packages" className="w-12 h-12 object-contain" />,
                             title: "Packages Complets",
                             desc: "Vol, hébergement et transferts inclus pour un voyage sans souci."
                         },
                         {
-                            icon: <img src={iconHajj2} alt="Hotels" className="w-12 h-12 object-contain" />,
+                            icon: <img src={iconHajj2} loading="lazy" alt="Hotels" className="w-12 h-12 object-contain" />,
                             title: "Hôtels Premium",
                             desc: "Séjournez dans les meilleurs hôtels à proximité des lieux saints."
                         },
@@ -347,6 +353,7 @@ export default function Home() {
                             className="flex-shrink-0 w-[300px] md:w-[400px] rounded-2xl overflow-hidden shadow-xl border-4 border-primary-50 snap-center"
                         >
                             <img
+                                loading="lazy"
                                 src={img}
                                 alt={`FAQ ${index + 1}`}
                                 className="w-full h-auto object-cover"

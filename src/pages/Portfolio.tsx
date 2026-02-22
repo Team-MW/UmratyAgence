@@ -14,7 +14,11 @@ const images = [
 export default function Portfolio() {
     return (
         <>
-            <SEO title="Portfolio" description="Galerie photos de nos voyages Omra et Hajj. Retours en images." />
+            <SEO
+                title="Portfolio"
+                description="Parcourez notre galerie photos et revivez les moments inoubliables de nos précédents séjours Omra et Hajj organisés par Umraty Agence. Les témoignages en images de nos pèlerins."
+                keywords="photos Omra, vidéos Hajj, pèlerinage en images, Umraty Agence, témoignages Omra, groupe Omra, souvenirs La Mecque"
+            />
 
             <div className="bg-dark-900 pt-32 pb-16 text-center text-white">
                 <h1 className="text-5xl font-serif font-bold text-primary-400 mb-6">Nos Voyages en Images</h1>
