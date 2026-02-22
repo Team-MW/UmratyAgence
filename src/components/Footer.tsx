@@ -127,9 +127,17 @@ export default function Footer() {
                         Copyright © {new Date().getFullYear()} <span className="text-gray-300 font-medium">Umraty Agence</span>. Tous droits réservés.
                     </p>
                     <div className="flex items-center gap-6">
-                        <p className="text-xs text-gray-600 font-medium tracking-wide">
-                            Powered by <span className="text-primary-700 font-bold">MICRODIDACT</span>
-                        </p>
+                        <a
+                            href="https://microdidact.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-2 text-xs text-gray-500 hover:text-white transition-colors duration-300"
+                        >
+                            <span className="tracking-wide">Réalisé par</span>
+                            <span className="font-bold text-primary-500 group-hover:text-primary-300 transition-colors duration-300 tracking-widest uppercase text-xs border border-primary-800 group-hover:border-primary-500 px-2 py-0.5 rounded transition-all duration-300">
+                                MICRODIDACT
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>

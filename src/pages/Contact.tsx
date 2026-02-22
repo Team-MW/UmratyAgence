@@ -2,7 +2,7 @@ import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
-import contactHeroBg from '../assets/Gemini_Generated_Image_anjhwjanjhwjanjh.png';
+import hajjBg from '../assets/hajj.jpg';
 
 export default function Contact() {
     return (
@@ -11,25 +11,24 @@ export default function Contact() {
 
             <div className="bg-dark-900 py-32 text-center text-white relative overflow-hidden">
                 <div
-                    className="absolute inset-0 bg-cover bg-center opacity-40"
-                    style={{ backgroundImage: `url(${contactHeroBg})` }}
+                    className="absolute inset-0 bg-cover bg-center opacity-80"
+                    style={{ backgroundImage: `url(${hajjBg})` }}
                 />
+                <div className="absolute inset-0 bg-black/20" />
                 <div className="relative z-10 max-w-4xl mx-auto px-4">
-                    <motion.h1
+                    <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-6xl font-serif font-bold mb-6 text-primary-400"
+                        className="inline-block px-8 py-6 md:px-12 md:py-8 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl"
                     >
-                        Contactez-nous
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                        className="text-xl text-gray-200"
-                    >
-                        Nous sommes à votre écoute pour organiser votre voyage.
-                    </motion.p>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-lg tracking-tight">
+                            Contactez-nous
+                        </h1>
+                        <div className="w-20 h-1 bg-primary-400 mx-auto mb-4 rounded-full" />
+                        <p className="text-lg md:text-xl text-white/95 font-light leading-relaxed">
+                            Nous sommes à votre écoute pour organiser votre voyage.
+                        </p>
+                    </motion.div>
                 </div>
             </div>
 

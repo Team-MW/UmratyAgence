@@ -114,12 +114,14 @@ export default function Home() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-6">Nos forfaits Hajj</h2>
+                        <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-6">Forfaits Hajj</h2>
                         <p className="text-xl text-gray-800 mb-6 font-light">
                             Découvrez nos services pour préparer un Hajj accompli, conforme à vos envies et à vos moyens.
                         </p>
-                        <p className="text-gray-700 mb-8 leading-relaxed">
+                        <p className="text-xl text-gray-800 mb-6 font-light">
                             Chez Umraty Agence, nous savons que le Hajj n’est pas un simple voyage, mais l’un des plus grands actes d’adoration.
+                        </p>
+                        <p className="text-gray-700 mb-8 leading-relaxed">
                             Nos forfaits ont été créés pour s’adapter à vos attentes et à votre budget, afin que vous puissiez accomplir ce pilier de l’Islam dans les meilleures conditions, avec sérénité et confiance.
                         </p>
                         <Link to="/services" className="inline-flex items-center text-primary-700 font-bold hover:text-primary-900 transition-colors border-b-2 border-primary-600 pb-1">
@@ -154,7 +156,7 @@ export default function Home() {
                         <img
                             src={flyerOmra}
                             alt="Guide Omra"
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-cover"
                         />
                     </motion.div>
 
@@ -178,47 +180,111 @@ export default function Home() {
                 </div>
             </Section>
 
-            {/* Services Divers */}
+            {/* Services Divers - Bulles */}
             <Section
                 variant="image"
-                className="text-white relative overflow-hidden"
+                className="text-white relative overflow-hidden py-20 md:py-28"
                 style={{
                     backgroundImage: `url(${servicesBg})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
             >
-                {/* Overlay for better readability if needed, though variant="dark" usually handles background color, here we use image */}
+                {/* Bulles décoratives en arrière-plan */}
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                    <div className="absolute top-1/4 -left-20 w-72 h-72 rounded-full bg-primary-500/10 blur-3xl" />
+                    <div className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full bg-white/5 blur-3xl" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary-400/5 blur-3xl" />
+                </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                <div className="relative z-10 space-y-8 md:space-y-10">
+                    {/* Titre centré */}
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
+                        className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white text-center leading-tight drop-shadow-lg"
                     >
-                        <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Services divers</h2>
-                        <p className="text-xl text-gray-200 mb-8">
-                            Besoin d’un visa, de réservez un hotel ou encore de reservez vos billet de train Médina – Mekkah ?
-                        </p>
-                        <p className="text-gray-100 mb-8">
-                            Consulter dès maintenant nos service pour vous faciliter votre voyage.
-                        </p>
-                        <Link to="/services" className="px-8 py-3 border border-primary-500 text-primary-400 hover:bg-primary-600 hover:text-white transition-all rounded-full font-bold">
-                            En savoir plus
-                        </Link>
+                        Services divers
+                    </motion.h2>
+
+                    {/* Bulle 1 : accroche */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="flex justify-center"
+                    >
+                        <div className="inline-block max-w-3xl px-8 py-6 md:px-10 md:py-7 rounded-[2rem] bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl shadow-black/20">
+                            <p className="text-xl md:text-2xl lg:text-3xl text-gray-100 leading-relaxed font-light text-center">
+                                Besoin d’un visa, de réserver un hôtel ou encore de réserver vos billets de train Médina – Mekkah ?
+                            </p>
+                        </div>
                     </motion.div>
 
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
-                            <Plane className="w-10 h-10 text-primary-500 mb-4" />
-                            <h4 className="font-bold text-lg mb-2 text-white">Vols & Train</h4>
-                            <p className="text-sm text-white">Réservation simplifiée</p>
+                    {/* Bulle 2 : sous-texte */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="flex justify-center"
+                    >
+                        <div className="inline-block max-w-2xl px-8 py-5 md:px-10 md:py-6 rounded-[2rem] bg-black/30 backdrop-blur-md border border-white/15 shadow-lg">
+                            <p className="text-lg md:text-xl text-white/95 leading-relaxed text-center">
+                                Consultez dès maintenant nos services pour vous faciliter votre voyage.
+                            </p>
                         </div>
-                        <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
-                            <ShieldCheck className="w-10 h-10 text-primary-500 mb-4" />
-                            <h4 className="font-bold text-lg mb-2 text-white">Visas</h4>
-                            <p className="text-sm text-white">Démarches administratives</p>
-                        </div>
+                    </motion.div>
+
+                    {/* Cartes services en bulles + CTA */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch max-w-5xl mx-auto pt-4">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.25 }}
+                            whileHover={{ y: -6, scale: 1.02 }}
+                            className="flex flex-col p-8 rounded-[2rem] bg-black/35 backdrop-blur-xl border border-white/25 shadow-2xl shadow-black/30 hover:border-primary-400/60 transition-all duration-300"
+                        >
+                            <div className="w-16 h-16 rounded-2xl bg-primary-500/20 flex items-center justify-center mb-5 border border-primary-400/30">
+                                <Plane className="w-8 h-8 text-primary-400" />
+                            </div>
+                            <h4 className="font-bold text-xl md:text-2xl mb-2 text-white">Vols & Train</h4>
+                            <p className="text-white/90 flex-1">Réservation simplifiée</p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.35 }}
+                            whileHover={{ y: -6, scale: 1.02 }}
+                            className="flex flex-col p-8 rounded-[2rem] bg-black/35 backdrop-blur-xl border border-white/25 shadow-2xl shadow-black/30 hover:border-primary-400/60 transition-all duration-300"
+                        >
+                            <div className="w-16 h-16 rounded-2xl bg-primary-500/20 flex items-center justify-center mb-5 border border-primary-400/30">
+                                <ShieldCheck className="w-8 h-8 text-primary-400" />
+                            </div>
+                            <h4 className="font-bold text-xl md:text-2xl mb-2 text-white">Visas</h4>
+                            <p className="text-white/90 flex-1">Démarches administratives</p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.45 }}
+                            className="flex flex-col justify-center items-center p-8 rounded-[2rem] bg-primary-500/20 backdrop-blur-xl border-2 border-primary-400/50 shadow-2xl shadow-primary-900/20 hover:bg-primary-500/30 transition-all duration-300"
+                        >
+                            <Link
+                                to="/services"
+                                className="text-center text-lg md:text-xl font-bold text-primary-200 hover:text-white transition-colors"
+                            >
+                                En savoir plus
+                            </Link>
+                            <p className="text-sm text-white/80 mt-2 text-center">Découvrir tous nos services</p>
+                        </motion.div>
                     </div>
                 </div>
             </Section>
