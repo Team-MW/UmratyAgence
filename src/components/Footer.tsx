@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { Phone, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -101,17 +101,6 @@ export default function Footer() {
                                     <span className="text-xs text-gray-500 uppercase tracking-widest mb-0.5">WhatsApp</span>
                                     <a href="https://wa.me/33758484477" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white font-medium transition-colors">
                                         +33 7 58 48 44 77
-                                    </a>
-                                </div>
-                            </li>
-                            <li className="flex items-start group">
-                                <div className="mt-1 min-w-[32px] w-8 h-8 rounded-full bg-primary-900/30 flex items-center justify-center mr-3 group-hover:bg-primary-600 transition-colors">
-                                    <Mail size={16} className="text-primary-500 group-hover:text-white" />
-                                </div>
-                                <div className="flex flex-col">
-                                    <span className="text-xs text-gray-500 uppercase tracking-widest mb-0.5">Email</span>
-                                    <a href="mailto:contact@umratyagence.com" className="text-gray-300 hover:text-white font-medium transition-colors">
-                                        contact@umratyagence.com
                                     </a>
                                 </div>
                             </li>
