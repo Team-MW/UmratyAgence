@@ -39,28 +39,54 @@ export default function Contact() {
             </div>
 
             <Section variant="light" className="relative -mt-16 z-20">
-                <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden mb-16">
-                    {/* Contact Form - JotForm Embed Takes Full Top Width */}
-                    <div className="p-0 md:p-8 w-full relative">
-                        <div className="text-center mb-8 pt-8 px-4">
-                            <h2 className="text-3xl font-serif font-bold text-dark-900 mb-4">Remplissez notre formulaire</h2>
-                            <p className="text-gray-600">Laissez-nous vos coordonnées et votre demande, nous vous contacterons rapidement.</p>
+                <div className="max-w-6xl mx-auto mb-16">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl font-serif font-bold text-dark-900 mb-4">Nos Formulaires</h2>
+                        <p className="text-lg text-gray-600">Laissez-nous vos coordonnées ou effectuez votre pré-inscription via l'un de nos formulaires ci-dessous.</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                        {/* Formulaire Google */}
+                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden p-0 md:p-6 h-full flex flex-col">
+                            <div className="text-center mb-6 pt-6 px-4">
+                                <h3 className="text-2xl font-serif font-bold text-primary-700">Pré-inscription</h3>
+                            </div>
+                            <iframe
+                                id="GoogleFormIFrame"
+                                title="Formulaire de Pré-inscription"
+                                allowTransparency={true}
+                                allowFullScreen={true}
+                                allow="geolocation; microphone; camera"
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSf6rOse-kpH46srvU_qdQhJ3pmX0gmiSe4_ESS15181sNJ63g/viewform?embedded=true"
+                                className="w-full flex-grow"
+                                style={{
+                                    minHeight: '1200px',
+                                    border: 'none',
+                                }}
+                                scrolling="yes"
+                            />
                         </div>
-                        <iframe
-                            id="JotFormIFrame-252625071533351"
-                            title="Formulaire Contact"
-                            allowTransparency={true}
-                            allowFullScreen={true}
-                            allow="geolocation; microphone; camera"
-                            src="https://form.jotform.com/252625071533351"
-                            style={{
-                                minWidth: '100%',
-                                maxWidth: '100%',
-                                height: '800px',
-                                border: 'none',
-                            }}
-                            scrolling="yes"
-                        />
+
+                        {/* Formulaire JotForm */}
+                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden p-0 md:p-6 h-full flex flex-col">
+                            <div className="text-center mb-6 pt-6 px-4">
+                                <h3 className="text-2xl font-serif font-bold text-primary-700">Contact Rapide</h3>
+                            </div>
+                            <iframe
+                                id="JotFormIFrame-252625071533351"
+                                title="Formulaire Contact"
+                                allowTransparency={true}
+                                allowFullScreen={true}
+                                allow="geolocation; microphone; camera"
+                                src="https://form.jotform.com/252625071533351"
+                                className="w-full flex-grow"
+                                style={{
+                                    minHeight: '1200px',
+                                    border: 'none',
+                                }}
+                                scrolling="yes"
+                            />
+                        </div>
                     </div>
                 </div>
 

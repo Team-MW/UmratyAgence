@@ -121,14 +121,24 @@ export default function Services() {
                                         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.93.597 1.69.917 2.806.917 3.181 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm0 9.778c-.961 0-1.748-.288-2.673-.799l-.265-.133-1.638.429.437-1.596-.153-.263c-.569-.906-.906-1.742-.906-2.616 0-2.208 1.796-4.004 4.004-4.004 2.208 0 4.004 1.796 4.004 4.004 0 2.208-1.796 4.004-4.004 4.004z" />
                                     </svg>
                                 </a>
-                                <a
-                                    href="https://form.jotform.com/240373809673059"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-primary-500/20 w-full md:w-auto"
-                                >
-                                    <span>Remplir le Formulaire</span>
-                                </a>
+                                <div className="flex flex-col sm:flex-row gap-4 w-full">
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSf6rOse-kpH46srvU_qdQhJ3pmX0gmiSe4_ESS15181sNJ63g/viewform?embedded=true"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-primary-500/20 flex-1 text-center"
+                                    >
+                                        <span>Pré-inscription</span>
+                                    </a>
+                                    <a
+                                        href="https://form.jotform.com/240373809673059"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-white border-2 border-primary-600 text-primary-600 hover:bg-primary-50 font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-primary-500/10 flex-1 text-center"
+                                    >
+                                        <span>Contact Rapide</span>
+                                    </a>
+                                </div>
                             </div>
                         </motion.div>
                         <motion.div

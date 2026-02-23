@@ -48,8 +48,8 @@ export default function Documentation() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                             {[
-                                { file: 'Document1.pdf', name: 'Document 1' },
-                                { file: 'Document2.pdf', name: 'Document 2' }
+                                { file: 'Document1.pdf', name: 'Mérites de médine et de la omra' },
+                                { file: 'Document2.pdf', name: 'sifat -umrah' }
                             ].map((doc, index) => (
                                 <motion.div
                                     key={index}
