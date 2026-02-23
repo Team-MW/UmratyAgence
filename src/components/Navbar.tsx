@@ -19,6 +19,7 @@ export default function Navbar() {
     const links = [
         { name: 'Accueil', path: '/' },
         { name: 'Nos Services', path: '/services' },
+        { name: 'Documentation', path: '/documentation' },
         { name: 'Formulaire', path: '/contact' },
     ];
 

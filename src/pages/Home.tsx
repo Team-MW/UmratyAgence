@@ -1,7 +1,7 @@
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Plane, ShieldCheck } from 'lucide-react';
+import { Plane, ShieldCheck, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import flyerHajj from '../assets/PHOTO-2026-02-18-17-05-02.jpg';
 import flyerOmra from '../assets/PHOTO-2026-02-14-10-20-37.jpg';
@@ -341,8 +341,62 @@ export default function Home() {
                 </div>
             </Section>
 
+            {/* Avis Clients Section */}
+            <Section variant="light" className="bg-gray-50 pb-12 pt-16">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-4">Avis de nos pèlerins</h2>
+                    <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
+                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+                        Découvrez les retours d'expérience de ceux qui nous ont fait confiance.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto px-4">
+                    {/* Avis 1 */}
+                    <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
+                        <div className="flex items-center gap-1 mb-4 text-yellow-500">
+                            <Star className="w-5 h-5 fill-current" />
+                            <Star className="w-5 h-5 fill-current" />
+                            <Star className="w-5 h-5 fill-current" />
+                            <Star className="w-5 h-5 fill-current" />
+                            <Star className="w-5 h-5 fill-current" />
+                            <span className="text-gray-400 text-sm ml-2 font-light">il y a quelques jours</span>
+                        </div>
+                        <p className="text-gray-700 italic flex-1 leading-relaxed">
+                            "السلام عليكم ورحمة الله وبركاته<br /><br />
+                            Une expérience exceptionnelle avec Umraty Voyages ! Du début à la fin, l'organisation a été irréprochable. L'équipe est d'un professionnalisme rare, toujours disponible et à l'écoute de nos besoins.<br /><br />
+                            Les hôtels étaient idéalement situés proches des Haramain, ce qui a rendu notre séjour fluide et agréable. On se sent vraiment accompagné et en sécurité, ce qui permet de vivre son pèlerinage en toute sérénité.<br /><br />
+                            Je recommande vivement cette agence à tous ceux qui recherchent le sérieux, la qualité et un accueil chaleureux. بارك الله فيكم à toute l'équipe pour ce voyage inoubliable. Je reviendrai vers vous pour mes futurs séjours sans aucune hésitation ! إن شاء الله"
+                        </p>
+                    </div>
+
+                    {/* Avis 2 */}
+                    <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-xl">
+                                Y
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-gray-900">Youssef Charchar</h4>
+                                <div className="flex items-center gap-1 text-yellow-500">
+                                    <Star className="w-4 h-4 fill-current" />
+                                    <Star className="w-4 h-4 fill-current" />
+                                    <Star className="w-4 h-4 fill-current" />
+                                    <Star className="w-4 h-4 fill-current" />
+                                    <Star className="w-4 h-4 fill-current" />
+                                    <span className="text-gray-400 text-sm ml-2 font-light">il y a quelques jours</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p className="text-gray-700 italic flex-1 leading-relaxed text-lg">
+                            "Merci beaucoup à l’agence pour la parfaite organisation de notre Omra. Service sérieux, équipe disponible et très professionnelle. Qu’Allah vous récompense 🤲"
+                        </p>
+                    </div>
+                </div>
+            </Section>
+
             {/* FAQ Slider Section */}
-            <Section variant="light" className="overflow-hidden">
+            <Section variant="light" className="overflow-hidden bg-white">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-4">Questions Fréquentes</h2>
                     <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />

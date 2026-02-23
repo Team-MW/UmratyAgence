@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
+import Documentation from './pages/Documentation';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -52,6 +53,11 @@ function AppContent() {
             <Route path="/contact" element={
               <PageTransition>
                 <Contact />
+              </PageTransition>
+            } />
+            <Route path="/documentation" element={
+              <PageTransition>
+                <Documentation />
               </PageTransition>
             } />
           </Routes>
