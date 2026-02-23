@@ -53,14 +53,14 @@ export default function Documentation() {
                                 >
                                     <div className="aspect-[3/4] overflow-hidden bg-gray-100 relative">
                                         <img
-                                            src={`/src/assets/asset2/${num}.jpg`}
+                                            src={`/asset2/${num}.jpg`}
                                             alt={`Document ${num}`}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                             loading="lazy"
                                         />
                                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                             <a
-                                                href={`/src/assets/asset2/${num}.jpg`}
+                                                href={`/asset2/${num}.jpg`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="bg-white/20 hover:bg-white text-white hover:text-dark-900 border border-white backdrop-blur-sm px-6 py-2 rounded-full font-medium transition-colors"
