@@ -13,6 +13,11 @@ import servicesBg from '../assets/pexels-shams-alam-ansari-2453647-4118038.jpg';
 
 import faqImage1 from '../assets/faq1.jpg';
 import faqImage2 from '../assets/faq2.jpg';
+import question1 from '../assets/question1.jpg';
+import question2 from '../assets/Question2.jpg';
+import question3 from '../assets/Question3.jpg';
+import question4 from '../assets/Question4.jpg';
+import question5 from '../assets/Question5.jpg';
 
 export default function Home() {
     return (
@@ -344,7 +349,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex overflow-x-auto pb-8 gap-6 px-4 md:justify-center scrollbar-hide snap-x">
-                    {[faqImage1, faqImage2].map((img, index) => (
+                    {[faqImage1, faqImage2, question1, question2, question3, question4, question5].map((img, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0.9 }}
