@@ -1,6 +1,6 @@
 import Section from '../components/Section';
 import SEO from '../components/SEO';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import hajjBg from '../assets/hajj.jpg';
 
@@ -81,37 +81,15 @@ export default function Contact() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl items-start">
                             {/* Colonne Gauche: Coordonnées Textuelles */}
-                            <div className="space-y-6">
-                                <motion.div whileHover={{ y: -5 }} className="flex flex-col items-center gap-4 bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl">
-                                    <div className="bg-primary-500/20 p-3 rounded-full border border-primary-500/30">
-                                        <MapPin className="w-6 h-6 text-primary-400" />
-                                    </div>
-                                    <div className="text-center">
-                                        <span className="block text-sm text-gray-400 uppercase tracking-widest font-semibold mb-1">Adresse</span>
-                                        <p className="font-light text-base">123 Rue de la Mecque<br />75000 Paris</p>
-                                    </div>
-                                </motion.div>
-
+                            <div className="space-y-6 flex flex-col justify-center">
                                 <motion.div whileHover={{ y: -5 }} className="flex flex-col items-center gap-4 bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl">
                                     <div className="bg-primary-500/20 p-3 rounded-full border border-primary-500/30">
                                         <Phone className="w-6 h-6 text-primary-400" />
                                     </div>
                                     <div className="text-center">
                                         <span className="block text-sm text-gray-400 uppercase tracking-widest font-semibold mb-1">WhatsApp</span>
-                                        <a href="https://wa.me/33758484477" target="_blank" rel="noopener noreferrer" className="font-light text-lg hover:text-primary-300 transition-colors">
+                                        <a href="https://wa.me/33758484477" target="_blank" rel="noopener noreferrer" className="font-light text-xl hover:text-primary-300 transition-colors">
                                             +33 7 58 48 44 77
-                                        </a>
-                                    </div>
-                                </motion.div>
-
-                                <motion.div whileHover={{ y: -5 }} className="flex flex-col items-center gap-4 bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl">
-                                    <div className="bg-primary-500/20 p-3 rounded-full border border-primary-500/30">
-                                        <Mail className="w-6 h-6 text-primary-400" />
-                                    </div>
-                                    <div className="text-center">
-                                        <span className="block text-sm text-gray-400 uppercase tracking-widest font-semibold mb-1">Email</span>
-                                        <a href="mailto:contact@umratyagence.com" className="font-light text-base hover:text-primary-300 transition-colors break-all">
-                                            contact@umratyagence.com
                                         </a>
                                     </div>
                                 </motion.div>

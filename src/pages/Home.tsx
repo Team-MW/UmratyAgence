@@ -393,6 +393,36 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
+
+                {/* Images d'Avis supplémentaires */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto px-4 mt-8">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
+                    >
+                        <img
+                            src="/renomer.jpeg"
+                            alt="Avis pèlerin supplémentaire 1"
+                            className="w-full h-auto object-cover"
+                            loading="lazy"
+                        />
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
+                    >
+                        <img
+                            src="/dsfds.jpeg"
+                            alt="Avis pèlerin supplémentaire 2"
+                            className="w-full h-auto object-cover"
+                            loading="lazy"
+                        />
+                    </motion.div>
+                </div>
             </Section>
 
             {/* FAQ Slider Section */}
