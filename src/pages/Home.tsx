@@ -424,7 +424,7 @@ export default function Home() {
                     <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
                 </div>
 
-                <div className="flex overflow-x-auto pb-8 gap-6 px-4 md:justify-center scrollbar-hide snap-x">
+                <div className="flex overflow-x-auto pb-8 gap-6 px-4 md:px-8 scrollbar-hide snap-x">
                     {[
                         '/faq/1.png', '/faq/2.png', '/faq/3.png', '/faq/4.png', '/faq/5.png',
                         '/faq/6.png', '/faq/8.png', '/faq/9.png', '/faq/10.png', '/faq/11.png'
@@ -433,14 +433,14 @@ export default function Home() {
                             key={index}
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: index * 0.2 }}
+                            transition={{ delay: index * 0.1 }}
                             className="flex-shrink-0 w-[300px] md:w-[400px] rounded-2xl overflow-hidden shadow-xl border-4 border-primary-50 snap-center"
                         >
                             <img
                                 loading="lazy"
                                 src={img}
                                 alt={`FAQ ${index + 1}`}
-                                className="w-full h-auto object-cover"
+                                className="w-full h-auto object-contain"
                             />
                         </motion.div>
                     ))}

@@ -1,7 +1,7 @@
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-
+import { FileText } from 'lucide-react';
 import heroBg from '../assets/bacgroudn11.png';
 
 export default function Documentation() {
@@ -40,8 +40,44 @@ export default function Documentation() {
 
             <Section variant="light" className="bg-gray-50 pb-20 pt-16">
                 <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {/* Liste des documents */}
+                    {/* Documents PDF */}
+                    <div className="lg:col-span-2 mb-10">
+                        <div className="text-center mb-10">
+                            <h2 className="text-3xl font-serif text-dark-900 mb-4">Documents Utiles</h2>
+                            <div className="w-20 h-1 bg-primary-500 mx-auto rounded-full" />
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            {[
+                                { file: 'Document1.pdf', name: 'Document 1' },
+                                { file: 'Document2.pdf', name: 'Document 2' }
+                            ].map((doc, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:border-primary-300 hover:shadow-xl transition-all group"
+                                >
+                                    <a href={`/${doc.file}`} target="_blank" rel="noopener noreferrer" className="flex items-center p-6 gap-6">
+                                        <div className="w-16 h-16 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white shadow-inner transition-colors">
+                                            <FileText className="w-8 h-8" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-primary-700 transition-colors">{doc.name}</h3>
+                                            <p className="text-gray-500 font-light text-sm">Cliquez pour consulter le PDF</p>
+                                        </div>
+                                    </a>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Liste des images de documents */}
                     <div className="lg:col-span-2">
+                        <div className="text-center mb-10 mt-6">
+                            <h2 className="text-3xl font-serif text-dark-900 mb-4">Galerie des Documents</h2>
+                            <div className="w-20 h-1 bg-primary-500 mx-auto rounded-full" />
+                        </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19].map((num) => (
                                 <motion.div
